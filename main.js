@@ -13,11 +13,11 @@ function defaultGrid(size) {
         for (let j = 0; j < size; j++) {
             let cell = document.createElement('div');
             cell.classList.add("cell");
-            cell.addEventListener('mouseenter', () => {
-                let greyScale = random256();
-                cell.style.backgroundColor = `rgb(${greyScale}, ${greyScale}, ${greyScale})`;
-                cell.style.transition = '0.3s';
-            });
+            // cell.addEventListener('mouseenter', () => {
+            //     let greyScale = random256();
+            //     cell.style.backgroundColor = `rgb(${greyScale}, ${greyScale}, ${greyScale})`;
+            //     cell.style.transition = '0.3s';
+            // });
             grid.appendChild(cell);
         }
     }
@@ -75,20 +75,20 @@ function newGrid(size) {
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 }
 
-// grey.addEventListener('click', () => {
-//     paintGrey();
-// });
+grey.addEventListener('click', () => {
+    paintGrey();
+});
 
-// color.addEventListener('click', () => {
-//     paintColor();
-// });
+color.addEventListener('click', () => {
+    paintColor();
+});
 
-// erase.addEventListener('click', () => {
-//     eraseCells();
-// });
+erase.addEventListener('click', () => {
+    eraseCells();
+});
 
-// reset.addEventListener('click', () => {
-//     resetAll();
-// });
+reset.addEventListener('click', () => {
+    resetAll();
+});
 
 defaultGrid(16);
