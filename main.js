@@ -8,9 +8,7 @@ function random256() {
     return Math.floor(Math.random() * 256);
 }
 
-function newGrid(size) {
-    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+function defaultGrid(size) {
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
             let cell = document.createElement('div');
@@ -25,5 +23,48 @@ function newGrid(size) {
     }
 }
 
+function paintGrey() {
+    let cells = [...document.querySelectorAll(".cells")];
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', () => {
+            let greyScale = random256();
+            cell.style.backgroundColor = `rgb(${greyScale}, ${greyScale}, ${greyScale})`;
+            cell.style.transition = '0.3s';
+        });
+    });
+}
 
-newGrid(16);
+function paintColor() {
+    let cells = [...document.querySelectorAll(".cells")];
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', () => {
+            cell.style.backgroundColor = `rgb(${random256()}, ${random256()}, ${random256()})`;
+            cell.style.transition = '0.3s';
+        });
+    });
+}
+
+function eraseCells() {
+    let cells = [...document.querySelectorAll(".cells")];
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', () => {
+            cell.style.backgroundColor = white;
+        });
+    });
+}
+
+function removeCells() {
+    let cells = [...document.querySelectorAll(".cells")];
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', () => {
+            cell.remove();
+        });
+    });
+}
+
+function newGrid(size) {
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+}
+
+defaultGrid(16);
