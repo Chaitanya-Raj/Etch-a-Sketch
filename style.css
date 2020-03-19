@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    text-shadow: 1px 1px grey;
+}
+
+#grid-container {
+    display: grid;
+    width: 70vh;
+    height: 70vh;
+    margin: auto;
+    border: solid 2px black;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.cell {
+    border: solid 1px black;
+}
+
+#button-container {
+    display: flex;
+    width: 70vh;
+    margin: auto;
+    margin-top: 50px;
+}
+
+button {
+    margin: auto;
+    padding: 10px;
+    border: solid 2px black;
+}
