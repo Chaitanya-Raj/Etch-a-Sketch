@@ -56,15 +56,39 @@ function eraseCells() {
 function removeCells() {
     let cells = [...document.querySelectorAll(".cells")];
     cells.forEach(cell => {
-        cell.addEventListener('mouseenter', () => {
-            cell.remove();
-        });
+        cell.remove();
     });
+}
+
+function resetAll() {
+    removeGrid();
+    let size;
+    do {
+        size = prompt('Select a grid size between 2 and 100', '');
+    } while (size < 2 || size > 100);
+    newGrid(size);
+    defaultGrid(size);
 }
 
 function newGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 }
+
+// grey.addEventListener('click', () => {
+//     paintGrey();
+// });
+
+// color.addEventListener('click', () => {
+//     paintColor();
+// });
+
+// erase.addEventListener('click', () => {
+//     eraseCells();
+// });
+
+// reset.addEventListener('click', () => {
+//     resetAll();
+// });
 
 defaultGrid(16);

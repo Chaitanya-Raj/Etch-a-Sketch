@@ -15,6 +15,9 @@ h1 {
 
 .cell {
     border: solid 1px black;
+    background-color: white;
+    width: auto;
+    height: auto;
 }
 
 #button-container {
@@ -28,4 +31,19 @@ button {
     margin: auto;
     padding: 10px;
     border: solid 2px black;
+}
+
+button:hover {
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+button:focus {
+    border-radius: 25px;
+    box-shadow: 0 0 20px white;
+    text-shadow: 0 0 10px white;
+    transform: scale(1.2);
+    animation: scale-elm 500ms ease infinite alternate;
+    box-shadow: 0 0 1px 1px black;
+    transform: 200ms;
 }
