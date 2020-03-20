@@ -9,6 +9,6 @@ This project utilized the following and the learning outcomes were:
 
 This project is a part of The Odin Project curriculum.
 
-The Odin Project
 Web Development 101
+
 JavaScript Basics - 9
