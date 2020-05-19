@@ -1,51 +1,49 @@
 h1 {
-    text-align: center;
-    text-shadow: 1px 1px grey;
-    margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 1px 1px grey;
+  margin-bottom: 30px;
 }
 
 #grid-container {
-    display: grid;
-    width: 70vh;
-    height: 70vh;
-    margin: auto;
-    border: solid 2px black;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+  display: grid;
+  width: 70vh;
+  height: 70vh;
+  margin: auto;
+  border: solid 2px black;
 }
 
 .cell {
-    border: solid 1px black;
-    background-color: white;
-    width: auto;
-    height: auto;
+  border: solid 1px black;
+  background-color: white;
+  width: auto;
+  height: auto;
 }
 
 #button-container {
-    display: flex;
-    width: 70vh;
-    margin: auto;
-    margin-bottom: 40px;
+  display: flex;
+  width: 70vh;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
 button {
-    margin: auto;
-    padding: 10px;
-    border: solid 2px black;
+  margin: auto;
+  padding: 10px;
+  border: solid 2px black;
 }
 
 button:hover {
-    transform: scale(1.1);
-    border-radius: 25px;
-    transition: 0.25s;
+  transform: scale(1.1);
+  border-radius: 25px;
+  transition: 0.25s;
 }
 
 button:focus {
-    border-radius: 25px;
-    box-shadow: 0 0 20px white;
-    text-shadow: 0 0 10px white;
-    transform: scale(1.2);
-    animation: scale-elm 500ms ease infinite alternate;
-    box-shadow: 0 0 1px 1px black;
-    transform: 200ms;
+  border-radius: 25px;
+  box-shadow: 0 0 20px white;
+  text-shadow: 0 0 10px white;
+  transform: scale(1.2);
+  animation: scale-elm 500ms ease infinite alternate;
+  box-shadow: 0 0 1px 1px black;
+  transform: 200ms;
 }
